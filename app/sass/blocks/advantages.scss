@@ -1,0 +1,179 @@
+.advantages {
+	background: #f2f2f2;
+	margin-top: 15px;
+	padding-top: 40px;
+	padding-bottom: 320px;
+
+	position: relative;
+	z-index: 1;
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			border-top: 8vw solid #fff;
+		    border-right: 100vw solid transparent;    
+		}
+
+		&::after {
+		    content: "";
+		    position: absolute;
+		    width: 180px;
+		    height: 275px;
+		    bottom: 0;
+		    left: calc(50% - 90px);
+		    background: url(../image/advantages/phone-pink-smile.png) no-repeat center top;
+		    background-size: 175px;
+ 
+		}
+}
+
+
+.advantages__wrap {
+	@include wrap-mobile;
+}
+
+
+.advantage-item {
+	margin-top: 30px;
+}
+
+.advantage-item__img {
+	display: none;
+}
+
+.advantage-item__title {
+	margin: 0;
+	margin-bottom: 15px;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: "OpenSansBold";
+	color: #000;
+	text-align: center;
+
+}
+
+.advantage-item__desc {
+	margin: 0;
+	padding: 0px 10px;
+	font-family: "OpenSansRegular";
+	font-size: 14px;
+	line-height: 24px;
+	color: $text-color;
+	text-align: center;
+}
+
+
+@media #{$tablet-width} {
+	
+	.advantages {
+		margin-top: 30px;
+		padding-bottom: 40px;
+
+			&::after {
+			    width: 267px;
+			    height: 450px;
+			    left: 40px;
+			    background-size: 267px;
+			}
+	}
+
+	.advantages__wrap {
+		@include wrap-teblet;
+	}
+
+	.advantages__items {
+		padding-left: 48%;
+	}
+
+	.advantage-item {
+		margin-top: 35px;
+	}
+
+	.advantage-item__title {
+		text-align: left;
+	}
+
+	.advantage-item__desc {
+		text-align: left;
+		padding: 0px;
+	}
+
+
+}
+
+
+@media #{$desc-width} {
+
+	.advantages {
+		margin-top: 65px;
+		padding: 0px;
+		padding-bottom: 70px;
+		overflow: hidden;
+
+			&::after {
+				display: none;
+			}
+	}
+
+	.advantages__wrap {
+		@include wrap-desc;
+	}
+
+
+	.advantages__items {
+		padding:0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.advantage-item {
+		flex-basis: 27%;
+		margin-top: 5px;
+    	box-sizing: border-box;
+	}
+
+	.advantage-item__img {
+		position: relative;
+		display: inline-block;
+		padding: 0px 30px;
+	    height: 300px;
+	    overflow: hidden;
+	    margin-bottom: 45px;
+
+	    	&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			    margin: 0px 10px;
+			    box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5);
+	    	}
+	}
+
+
+
+	.advantage-item__title {
+		font-size: 30px;
+		line-height: 30px;
+		font-family: "OpenSansBold";
+		text-align: center;
+		padding: 0px 5px;
+		margin-bottom: 20px;
+	}
+
+
+	.advantage-item__desc {
+		font-size: 18px;
+		line-height: 30px;
+		font-family: "OpenSansRegular";
+		text-align: center;
+		margin-top: 20px;
+		color: $text-color;
+	}
+
+}

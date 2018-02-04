@@ -1,0 +1,94 @@
+
+.page-header {
+	position: relative;
+}
+
+.page-header__inner {
+	background: url(../image/header/mb-backg-hand.png) no-repeat center bottom -20%,
+				url(../image/header/t-background.jpg) no-repeat center;
+
+	background-size: auto, cover; 
+	min-height: 460px;
+}
+
+
+
+.page-header__title {
+	@include wrap-mobile;
+	padding-top: 85px;
+}
+
+
+
+.page-header__title h2 {
+	margin: 0px;
+	color: #fff;
+	font-family: "OpenSansLight";
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 400;
+	padding: 0px 25px;
+    text-align: center;
+}
+
+
+
+@media #{$tablet-width} {
+
+	.page-header__inner {
+		background: url(../image/header/t-backg-hand.png) no-repeat center bottom,
+					url(../image/header/d-background.jpg) no-repeat center;
+		min-height: 730px;
+	}
+
+
+	.page-header__title {
+		@include wrap-teblet;
+		padding-top: 205px;
+	}
+
+	.page-header__title h2 {
+		width: 48.38%;
+		padding: 0px 50px;
+		box-sizing: border-box;
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+
+}
+
+
+@media #{$desc-width} {
+
+	.page-header {
+		position: relative;
+		height: 100vh;
+		margin-bottom: 70px;
+	}
+	
+	
+	.page-header__inner {
+		background: url(../image/header/d-backg-hand.png) no-repeat 65% bottom,
+					url(../image/header/lg-background.jpg) no-repeat center;
+		background-size: auto, cover;
+		height: 100vh;
+	}
+
+	.page-header__title {
+		@include wrap-desc;
+		margin-top: 110px;
+    	padding: 0;
+
+	}
+
+	.page-header__title h2 {
+		width: 370px;
+		padding: 0px 80px 0px 30px;
+		font-size: 50px;
+		line-height: 60px;
+		box-sizing: border-box;
+	}
+
+
+}

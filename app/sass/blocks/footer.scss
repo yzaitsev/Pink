@@ -1,0 +1,161 @@
+
+.footer {
+	display: none;
+}
+
+
+@media #{$tablet-width} {
+
+	.footer {
+		display: block;
+	}
+
+	.footer__wrap {
+		@include wrap-teblet;
+		padding-top: 35px;
+		padding-bottom: 35px;
+		display: flex;
+	    justify-content: space-between;
+		align-items: center;
+	}
+
+
+	.footer-logo {
+		width: 150px;
+		height: 45px;
+	    align-self: flex-start;
+		background: url(../image/svg/icon-logo-tb-footer.svg) no-repeat center;
+	}
+
+	.footer-logo__link {
+	    display: block;
+	    width: 100%;
+	    height: 100%;
+	}
+
+	.footer-logo__img {
+		display: none;
+	}
+
+
+
+	.footer-social {
+		display: flex;
+		justify-content: space-between;
+		width: 200px;
+	}
+
+	.footer-social__link {
+		display: block;
+		width: 50px;
+		height: 50px;
+	    box-sizing: border-box;
+		font-size: 0;
+		border: 3px solid #e9ebec;
+		border-radius: 50%;
+		transition: border-color .4s ease;
+
+			&--twitter {
+				background: url(../image/svg/icon-twiter.svg) no-repeat center;
+			}
+	
+			&--fb {
+				background: url(../image/svg/icon-facebook.svg) no-repeat center;
+			}
+
+			
+			&--youtube {
+				background: url(../image/svg/icon-youtube.svg) no-repeat center;
+			}
+
+			
+			&:hover {
+				border-color: #404c59;
+			}
+
+			&:active {
+				opacity: .1;
+			}
+
+	}
+
+	.footer-social__img {
+		width: 50px;
+		height: 50px;
+	}
+
+
+
+
+
+	.footer-copyright {
+		width: 150px;		
+	}
+
+	.footer-copyright__info {
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.footer-copyright__link {
+		font-size: 14px;
+		line-height: 18px;
+		color: #404c59;
+		text-decoration: none;
+		font-family: "OpenSansRegular";
+
+			&:first-child {
+				margin: 0px 10px 0px 20px;
+			}
+
+			&:not(:first-child):hover {
+				opacity: .7;
+			}
+
+
+	}
+
+
+	.footer-copyright__img {
+		width: 30px;
+		height: 35px;
+
+	}
+
+
+
+}
+
+
+@media #{$desc-width} { 
+
+	.footer__wrap {
+		@include wrap-desc;
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+
+
+	.footer-logo {
+		background: none;
+	}
+
+
+	.footer-logo__img {
+		display: block;
+		width: 147px;
+		height: 40px;
+	}
+
+	.footer-copyright__link {
+		font-size: 18px;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+	}
+
+}

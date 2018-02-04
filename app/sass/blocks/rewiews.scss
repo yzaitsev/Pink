@@ -1,0 +1,110 @@
+@import "../lib/slick-custom.scss";
+
+
+.rewiews {
+	padding-top: 50px;
+}
+
+.rewiews__wrap {
+	@include wrap-mobile;
+}
+
+
+.rewiews-item {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
+}
+
+.rewiews-item__info {
+	margin-bottom: 20px;
+	flex-basis: 100%;
+}
+
+.rewiews-item__info-title {
+	margin: 0;
+	font-family: "OpenSansBold";
+	font-size: 18px;
+	line-height: 30px;
+	text-align: center;
+}
+
+
+.rewiews-item__info-more {
+	display: none;
+}
+
+.rewiews-item__desc {
+	margin: 0;
+	font-family: "OpenSansRegular";
+	font-size: 14px;
+	line-height: 30px;
+	color: $text-color;
+	text-align: center;
+}
+
+
+@media #{$tablet-width} {
+
+	.rewiews__wrap {
+		@include wrap-teblet;
+	}
+
+	.rewiews-item__info {
+		order: 1;
+		margin-bottom: 0px;
+	}
+
+
+	.rewiews-item__info-title {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	.rewiews-item__info-more {
+		display: block;
+		text-align: center;
+		font-family: "OpenSansRegular";
+		font-size: 14px;
+		line-height: 30px;
+		color: $text-color;
+	}
+
+	.rewiews-item__desc {
+		font-size: 18px;
+		margin-bottom: 35px;
+	}
+
+}
+
+
+@media #{$desc-width} {
+
+	.rewiews {
+		position: relative;
+		padding-top: 180px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				width: 80px;
+				height: 65px;
+				background: url(../image/rewiews/quotes.png) no-repeat center;
+				top: 70px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+	}
+
+
+	.rewiews__wrap {
+		@include wrap-desc;
+	}
+
+	.rewiews-item {
+		padding: 0px 130px;
+		box-sizing: border-box;
+	}
+
+
+}

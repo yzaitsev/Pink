@@ -1,0 +1,25 @@
+.map {
+	position: relative;
+	min-height: 200px;
+}
+
+.js-map__content {
+	position: absolute;
+	top: 0;
+	left:0;
+    width: 100%;
+    height: 100%;
+}
+
+@media #{$tablet-width} {
+	
+	.map {
+		min-height: 380px;
+	}
+}
+
+@media #{$desc-width} {
+	.map {
+		min-height: 500px;
+	}
+}

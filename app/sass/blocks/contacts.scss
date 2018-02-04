@@ -1,0 +1,162 @@
+
+.contacts {
+	position: relative;
+	padding-top: 45px;
+	padding-bottom: 40px;
+
+		&::after {
+		    content: "";
+		    position: absolute;
+		    top: 100%;
+		    z-index: 2;
+		    border-top: 10vw solid #fff;
+		    border-left: 50vw solid transparent;
+		    border-right: 50vw solid transparent;
+			
+
+		}
+}
+
+.contacts__wrap {
+	@include wrap-mobile;
+}
+
+.contacts-header {
+	margin-bottom: 35px;
+}
+
+.contacts-header__title {
+	margin: 0;
+	font-family: "OpenSansLight";
+	font-size: 24px;
+	line-height: 30px;
+	color: $text-color;
+	text-align: center;
+}
+
+.contacts-info__item {
+	margin-top: 25px;
+}
+
+.contacts-info__item-title {
+	margin: 0;
+	margin-bottom: 5px;
+	font-family: "OpenSansBold";
+	font-size: 18px;
+	line-height: 30px;
+	color: $text-color;
+	text-align: center;
+}
+
+.contacts-info__item-link {
+	display: block;
+	font-family: "OpenSansLight";
+	font-size: 24px;
+	line-height: 30px;
+	text-align: center;
+	color: $pink-color;
+	text-decoration: none;
+
+		&:hover {
+			color: $text-color;
+			text-decoration: underline;
+		}
+
+		&:active {
+			opacity: .3;
+		}
+
+}
+
+.contacts-info__item-desc {
+	margin: 0;
+	font-family: "OpenSansLight";
+	font-size: 24px;
+	line-height: 30px;
+	text-align: center;
+	color: $pink-color;	
+}
+
+
+@media #{$tablet-width} {
+
+	.contacts {
+		padding-top: 50px;
+		padding-bottom: 25px;
+
+
+		&::after {
+		    border-top: 7vw solid #fff;
+		}
+	}
+
+
+
+
+	.contacts__wrap {
+		@include wrap-teblet;
+	}
+
+	.contacts-header {
+		margin-bottom: 40px
+	}
+
+	.contacts-header__title {
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.contacts-info {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.contacts-info__item {
+		margin: 40px auto 0px;
+		padding: 10px 20px;
+		width: 48.38%;
+		box-sizing: border-box;
+	}
+
+}
+
+@media #{$desc-width} {
+
+	.contacts {
+		padding-top: 70px;
+		padding-bottom: 20px;
+	}
+
+	.contacts__wrap {
+		@include wrap-desc;
+	}
+
+
+	.contacts-header {
+		margin-bottom: 55px
+	}
+	
+
+	.contacts-header__title {
+		font-size: 50px;
+		line-height: 60px;
+	}
+
+
+
+	.contacts-info__item {
+		width: 33.3%;
+
+			&:nth-child(2) {
+				order: 1;
+			}
+	}
+
+
+	.contacts-info__item-title {
+		margin-bottom: 25px;
+	}
+
+
+}

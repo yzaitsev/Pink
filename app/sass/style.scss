@@ -1,0 +1,28 @@
+
+/* base style */
+@import "normalize.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "scaffolding.scss";
+
+/* libs */
+@import "lib/slick-custom.scss";
+
+/* ================== blocks =================== */
+
+/* header */
+@import "blocks/header.scss";
+@import "blocks/menu.scss";
+@import "blocks/promo.scss";
+
+/* main */
+@import "blocks/offers.scss";
+@import "blocks/advantages.scss";
+@import "blocks/research.scss";
+@import "blocks/rewiews.scss";
+@import "blocks/rate.scss";
+@import "blocks/contacts.scss";
+
+/* footer */
+@import "blocks/map.scss";
+@import "blocks/footer.scss";
